@@ -11,6 +11,19 @@ import { catchErrors } from "./utils";
 import styled, { createGlobalStyle } from "styled-components/macro";
 
 const GlobalStyle = createGlobalStyle`
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-grey: #b3b3b3;
+  --color-green: #1db954;
+  --color-dark-green: #1ed760;
+  --color-light-green: #a7f0ba;
+  --color-light-red: #ff4d4d;
+  --color-blue: #1db9ff;
+  --color-dark-blue: #1ed7ff;
+  --color-light-blue: #a7f0ff;
+}
+
 html {
   box-sizing: border-box;
 }
