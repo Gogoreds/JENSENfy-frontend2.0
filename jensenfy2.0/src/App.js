@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-
+//funny facts
 function App() {
   useEffect(() => {
     const queryString = window.location.search;
