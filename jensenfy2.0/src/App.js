@@ -1,13 +1,25 @@
 import { useEffect, useState } from "react";
-import { accessToken, logout } from "./spotify";
-
+import { accessToken, logout, getCurrentUserProfile } from "./spotify";
 import "./App.css";
-//funny facts
+
 function App() {
   const [token, setToken] = useState(null);
+  const [profile, setProfile] = useState(null);
 
   useEffect(() => {
     setToken(accessToken);
+
+    const fetchData = async () => {
+      try {
+        const { data } = await getCurrentUserProfile();
+        setProfile(data);
+        console.log(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (
