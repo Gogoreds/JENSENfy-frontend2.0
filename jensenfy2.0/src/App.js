@@ -1,8 +1,24 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useLocation,
+} from "react-router-dom";
 import { accessToken, logout, getCurrentUserProfile } from "./spotify";
 import { catchErrors } from "./utils";
 import "./App.css";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   const [token, setToken] = useState(null);
