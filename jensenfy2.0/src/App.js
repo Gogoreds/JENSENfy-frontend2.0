@@ -8,7 +8,8 @@ import {
 } from "react-router-dom";
 import { accessToken, logout, getCurrentUserProfile } from "./spotify";
 import { catchErrors } from "./utils";
-import styled, { createGlobalStyle } from "styled-components/macro";
+import styled from "styled-components/macro";
+import { GlobalStyle } from "./styles";
 
 const StyledLoginButton = styled.a`
   background-color: green;
