@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { catchErrors } from "../utils";
 import { getTopArtists } from "../spotify";
 
@@ -11,7 +11,6 @@ import {
 const TopArtists = () => {
   const [topArtists, setTopArtists] = useState(null);
   const [activeRange, setActiveRange] = useState(`short`);
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,20 +25,17 @@ const TopArtists = () => {
 
   return (
     <main>
-
       {topArtists && (
-        <SectionWrapper
-          title="Top Artists"
-          breadcrumb={true}
-        >
-          <TimeRangeRangeButtons activeRange={activeRange} setActiveRange={setActiveRange} />
+        <SectionWrapper title="Top Artists" breadcrumb={true}>
+          <TimeRangeRangeButtons
+            activeRange={activeRange}
+            setActiveRange={setActiveRange}
+          />
           <ArtistsGrid artists={topArtists.items.slice(0, 10)} />
         </SectionWrapper>
       )}
     </main>
-
   );
-}
+};
 
-
-export default TopArtists
+export default TopArtists;
