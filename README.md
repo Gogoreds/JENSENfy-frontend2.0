@@ -11,7 +11,7 @@
   <h2 align="center">JENSENfy Backend</h2>
 <br />
   <h3 align="center">
-    An awesome music app created by group IV for Paketering, leverans och uppföljning!
+    Group IV's Final Project for Paketering, leverans och uppföljning!
   </h3>
 </div>
 <br />
@@ -46,13 +46,15 @@
 
 <img src="https://iili.io/64LDl9.png" alt="Dashboard" >
 
-The purpose of this project is to develope and deploy a music web application in which users are able to search for their favorite music, singer, band or genre and listen to them along with the specific lyrics.
+The purpose of this project is to develope and deploy a web application in which users are able to review their Spotify profile and get a personalized playlist based on their listening habits. The application is built using the Spotify API and the Spotify Web API. The application is built using the MERN stack.
 
-Here's why:
+Here's a list of the main features:
 
-- Noone likes to listen to music in one tab and look up the lyrics on the other; Unfortunately we dont live in a perfect world and many worldwide famous applications make you do that, still, in 2022, yes I'm looking at you Spotify! 😉
-- Calling several APIs using a single server is something that we as a group have never done before and thought it'd be cool to do so.
-- You should implement DRY principles to the rest of your life
+- You can log in with your Spotify account
+- You can see your top artists and tracks
+- You can see your recently played tracks
+- You can see your top genres
+- You can see your top tracks and artists for a specific time range
 
 Of course, no application is perfect, but this one is; At least we did our best!😅
 
@@ -62,9 +64,15 @@ Of course, no application is perfect, but this one is; At least we did our best!
 
 This section lists the major frameworks/libraries used to bootstrap this project.
 
-- [![React][react.js]][react-url]
-- [![Bootstrap][bootstrap.com]][bootstrap-url]
-- [![JQuery][jquery.com]][jquery-url]
+- [React](https://reactjs.org/)
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Spotify API](https://developer.spotify.com/documentation/web-api/)
+- [Spotify Web API](https://developer.spotify.com/documentation/web-api/)
+- [Bootstrap](https://getbootstrap.com/)
+- [React Bootstrap](https://react-bootstrap.github.io/)
+- [React Router](https://reactrouter.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -75,35 +83,48 @@ This section lists the major frameworks/libraries used to bootstrap this project
 Once you have installed the dependencies, you can start by running the following command:
 
 ```bash
-npm run devStart
+npm start
 ```
 
 ### Installation
 
-1. Get a free API Key at (https://developer.spotify.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/Gogoreds/JENSENfy-backend
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = "ENTER YOUR API";
-   ```
-5. You might need to install the following dependencies manualy:
-   ```sh
-    npm install --save-dev spotify-web-api-node
-   ```
-   ```sh
-   npm install lyrics-finder
-   ```
-6. Run the following command to start the server:
-   ```sh
-    npm run devStart
-   ```
+1. Once you have the API Keys from Spotify and cloned the repo, you can install the dependencies by running the following command:
+
+```bash
+npm install
+```
+
+2. Clone the backend repo
+
+```sh
+git clone https://github.com/Gogoreds/JENSENfy-backend2.0.git
+```
+
+3. Create a .env file in the backend root folder and add your API keys in the following format:
+
+```sh
+CLIENT_ID=your_client_id
+CLIENT_SECRET=your_client_secret
+REDIRECT_URI=http://localhost:8888/callback
+```
+
+4. Install NPM packages for the backend
+
+```sh
+npm install
+```
+
+5. Run the backend
+
+```sh
+node app.js
+```
+
+6. Run the frontend
+
+```sh
+npm start
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
